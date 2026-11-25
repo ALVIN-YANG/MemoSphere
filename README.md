@@ -1,4 +1,4 @@
-<img src="docs/brand/memosphere.svg" alt="MemoSphere 图标" width="88" height="88">
+<img src="docs/brand/memosphere-v2.png" alt="MemoSphere 图标" width="88" height="88">
 
 # MemoSphere
 
