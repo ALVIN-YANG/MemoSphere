@@ -1,0 +1,265 @@
+[
+  {
+    "name": "retain",
+    "description": "异步提交同一会话的一批来源消息以提取长期记忆。相同请求可安全重发。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "project_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Project Id"
+        },
+        "connection_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Connection Id"
+        },
+        "session_id": {
+          "title": "Session Id",
+          "type": "string"
+        },
+        "async": {
+          "type": "boolean",
+          "const": true
+        },
+        "request_id": {
+          "type": "string"
+        },
+        "messages": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "items": {
+            "type": "object",
+            "properties": {
+              "source_id": {
+                "title": "Source Id",
+                "type": "string"
+              },
+              "role": {
+                "title": "Role",
+                "type": "string"
+              },
+              "text": {
+                "title": "Text",
+                "type": "string"
+              },
+              "sensitive": {
+                "default": false,
+                "title": "Sensitive",
+                "type": "boolean"
+              },
+              "spoken_at": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Spoken At"
+              }
+            },
+            "required": [
+              "source_id",
+              "role",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "project_id",
+        "session_id",
+        "messages"
+      ],
+      "additionalProperties": false
+    },
+    "outputSchema": {
+      "additionalProperties": true,
+      "type": "object"
+    }
+  },
+  {
+    "name": "recall",
+    "description": "按当前授权、事实时间和 token 预算返回相关记忆及证据。",
+    "inputSchema": {
+      "properties": {
+        "project_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Project Id"
+        },
+        "terms": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Terms",
+          "type": "array"
+        },
+        "purpose": {
+          "title": "Purpose",
+          "type": "string"
+        },
+        "local_only": {
+          "default": false,
+          "description": "Keep the query on this host and skip external embedding services.",
+          "type": "boolean"
+        },
+        "query": {
+          "default": "",
+          "title": "Query",
+          "type": "string"
+        },
+        "connection_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Connection Id"
+        },
+        "include_context": {
+          "default": false,
+          "title": "Include Context",
+          "type": "boolean"
+        },
+        "entity_ids": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Entity Ids"
+        },
+        "entity_names": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Entity Names"
+        },
+        "event_from": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Event From"
+        },
+        "event_to": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Event To"
+        },
+        "recent_progress": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recent Progress"
+        },
+        "as_of": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of"
+        },
+        "valid_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "查询事实有效日 YYYY-MM-DD。"
+        },
+        "known_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "知识截止时刻 RFC3339，或东八区自然日末 YYYY-MM-DD。"
+        },
+        "max_tokens": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65536,
+          "default": 4096
+        }
+      },
+      "required": [
+        "project_id"
+      ],
+      "title": "recallArguments",
+      "type": "object"
+    },
+    "outputSchema": {
+      "additionalProperties": true,
+      "title": "recallResult",
+      "type": "object"
+    }
+  }
+]

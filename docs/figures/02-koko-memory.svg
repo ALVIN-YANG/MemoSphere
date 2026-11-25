@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 750" role="img"><title>KoKo 写入与读取 · 目标流程</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10" fill="#d97745"/></marker></defs>
+<rect width="1440" height="750" rx="14" fill="#fbfaf6"/>
+<g font-family="system-ui, -apple-system, PingFang SC, Microsoft YaHei, sans-serif" fill="#24282f">
+<text data-svg-label="" x="60" y="68" font-size="38" font-weight="700">KoKo 写入与读取 · 目标流程</text>
+<text data-svg-label="" x="60" y="116" font-size="26" fill="#6b6f76">两个时刻分别确认：服务已接收消息；记忆已整理，可供当前账号按需读取。</text>
+<rect id="node-1" data-svg-box="" x="60" y="175" width="380" height="175" rx="14" fill="#e7edf3" stroke="#b9c6d4" stroke-width="2"/>
+<text data-svg-container="node-1" x="86" y="230" font-size="31" font-weight="650">KoKo 保存最终转写</text>
+<text data-svg-container="node-1" x="86" y="278" font-size="27" font-weight="400">同一事务累计待提交消息</text>
+<rect id="node-2" data-svg-box="" x="530" y="175" width="380" height="175" rx="14" fill="#f9ecdf" stroke="#e0b48f" stroke-width="2"/>
+<text data-svg-container="node-2" x="556" y="230" font-size="31" font-weight="650">客户端触发 retain</text>
+<text data-svg-container="node-2" x="556" y="278" font-size="27" font-weight="400">来源去重，返回任务号</text>
+<rect id="node-3" data-svg-box="" x="1000" y="175" width="380" height="175" rx="14" fill="#efe9f4" stroke="#c3b4d6" stroke-width="2"/>
+<text data-svg-container="node-3" x="1026" y="230" font-size="31" font-weight="650">后台整理</text>
+<text data-svg-container="node-3" x="1026" y="278" font-size="27" font-weight="400">核对版本，记录依据</text>
+<rect id="node-4" data-svg-box="" x="1000" y="445" width="380" height="175" rx="14" fill="#e4ecdf" stroke="#a9c0a4" stroke-width="2"/>
+<text data-svg-container="node-4" x="1026" y="500" font-size="31" font-weight="650">主库提交记忆</text>
+<text data-svg-container="node-4" x="1026" y="548" font-size="27" font-weight="400">索引按版本异步更新</text>
+<rect id="node-5" data-svg-box="" x="60" y="445" width="380" height="175" rx="14" fill="#e7edf3" stroke="#b9c6d4" stroke-width="2"/>
+<text data-svg-container="node-5" x="86" y="500" font-size="31" font-weight="650">KoKo 按当前账号提问</text>
+<text data-svg-container="node-5" x="86" y="548" font-size="27" font-weight="400">按需调用 recall</text>
+<rect id="node-6" data-svg-box="" x="530" y="445" width="380" height="175" rx="14" fill="#f9ecdf" stroke="#e0b48f" stroke-width="2"/>
+<text data-svg-container="node-6" x="556" y="500" font-size="31" font-weight="650">查询与返回</text>
+<text data-svg-container="node-6" x="556" y="548" font-size="27" font-weight="400">汇集候选，复核权限、</text>
+<text data-svg-container="node-6" x="556" y="596" font-size="27" font-weight="400">版本及删除状态</text>
+<path d="M440 263 H520" fill="none" stroke="#d97745" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M910 263 H990" fill="none" stroke="#d97745" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1190 350 V435" fill="none" stroke="#d97745" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1000 500 H920" fill="none" stroke="#d97745" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M440 500 H520" fill="none" stroke="#d97745" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M530 582 H450" fill="none" stroke="#d97745" stroke-width="3" marker-end="url(#arrow)"/>
+<text data-svg-label="" x="60" y="707" font-size="26">写入断线按原来源 ID 重试。读取超时继续当前对话；语音打断后丢弃晚到结果。</text>
+</g></svg>

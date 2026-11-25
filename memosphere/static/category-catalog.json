@@ -1,0 +1,7 @@
+[
+  {"id":"fact","label":"事实","description":"可核实的属性、关系或当前情况"},
+  {"id":"preference","label":"偏好","description":"在多个可行方案中更喜欢的选择，允许取舍"},
+  {"id":"rule","label":"规则","description":"有直接依据的明确约束，保留对象、条件和例外"},
+  {"id":"event","label":"事件","description":"在特定时间发生过的事情或工具回执"},
+  {"id":"task","label":"事项","description":"尚需跟踪或已完成的行动、承诺及其进度"}
+]

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1080" role="img" aria-labelledby="title desc"><title id="title">近期订房进展如何排序</title><desc id="desc">两个候选先按语义、BM25、实体三路名次计算 RRF。28 天前的询价略领先；按发生时间加权后，一天前的订房确认排第一。</desc>
+<rect width="1440" height="1080" rx="14" fill="#fbfaf6"/>
+<g font-family="system-ui, -apple-system, PingFang SC, Microsoft YaHei, sans-serif" fill="#24282f">
+<text data-svg-label="" x="60" y="64" font-size="38" font-weight="700" fill="#24282f">“最近，带爸妈出游的酒店订到哪一步了？”</text>
+<text data-svg-label="" x="60" y="111" font-size="26" font-weight="400" fill="#6b6f76">设计演算 · 假设两条事件均获授权、版本有效。名次为示例，时间取事件发生日。</text>
+<rect id="node-1" data-svg-box="" x="60" y="145" width="645" height="160" rx="14" fill="#e7edf3" stroke="#b9c6d4" stroke-width="2"/>
+<text data-svg-container="node-1" x="84" y="190" font-size="30" font-weight="650" fill="#24282f">A　28 天前 · 询价</text>
+<text data-svg-container="node-1" x="84" y="236" font-size="26" font-weight="400" fill="#24282f">“带爸妈出游的酒店已询价，等报价。”</text>
+<text data-svg-container="node-1" x="84" y="273" font-size="26" font-weight="400" fill="#24282f">已关联：家庭旅行、湖畔酒店。</text>
+<rect id="node-2" data-svg-box="" x="735" y="145" width="645" height="160" rx="14" fill="#e7edf3" stroke="#b9c6d4" stroke-width="2"/>
+<text data-svg-container="node-2" x="759" y="190" font-size="30" font-weight="650" fill="#24282f">B　1 天前 · 订房确认</text>
+<text data-svg-container="node-2" x="759" y="236" font-size="26" font-weight="400" fill="#24282f">“双床房预订成功，酒店已发确认单。”</text>
+<text data-svg-container="node-2" x="759" y="273" font-size="26" font-weight="400" fill="#24282f">已关联：家庭旅行。</text>
+<rect id="node-3" data-svg-box="" x="60" y="333" width="645" height="161" rx="14" fill="#fffef9" stroke="#c9c2b2" stroke-width="2"/>
+<text data-svg-container="node-3" x="84" y="378" font-size="30" font-weight="650" fill="#24282f">语义　B 第 1，A 第 2</text>
+<text data-svg-container="node-3" x="84" y="424" font-size="26" font-weight="400" fill="#24282f">问题在问预订进度。“预订成功”直接回答，</text>
+<text data-svg-container="node-3" x="84" y="461" font-size="26" font-weight="400" fill="#24282f">“等报价”也相关。</text>
+<rect id="node-4" data-svg-box="" x="735" y="333" width="645" height="161" rx="14" fill="#fffef9" stroke="#c9c2b2" stroke-width="2"/>
+<text data-svg-container="node-4" x="759" y="378" font-size="30" font-weight="650" fill="#24282f">BM25　A 第 1，B 第 2</text>
+<text data-svg-container="node-4" x="759" y="424" font-size="26" font-weight="400" fill="#24282f">A 命中“爸妈、出游、酒店”等原词。</text>
+<text data-svg-container="node-4" x="759" y="461" font-size="26" font-weight="400" fill="#24282f">B 命中“酒店”，其余用词不同。</text>
+<rect id="node-5" data-svg-box="" x="60" y="514" width="645" height="161" rx="14" fill="#fffef9" stroke="#c9c2b2" stroke-width="2"/>
+<text data-svg-container="node-5" x="84" y="559" font-size="30" font-weight="650" fill="#24282f">实体　A 第 1，B 第 2</text>
+<text data-svg-container="node-5" x="84" y="605" font-size="26" font-weight="400" fill="#24282f">两条都关联这次家庭旅行。假设前文提到</text>
+<text data-svg-container="node-5" x="84" y="642" font-size="26" font-weight="400" fill="#24282f">湖畔酒店，A 多匹配一个相关实体。</text>
+<rect id="node-6" data-svg-box="" x="735" y="514" width="645" height="161" rx="14" fill="#f9ecdf" stroke="#e0b48f" stroke-width="2"/>
+<text data-svg-container="node-6" x="759" y="559" font-size="30" font-weight="650" fill="#24282f">时间　按发生日调整基础分</text>
+<text data-svg-container="node-6" x="759" y="605" font-size="26" font-weight="400" fill="#24282f">问“最近”才加权。28 天前乘 1.03750，</text>
+<text data-svg-container="node-6" x="759" y="642" font-size="26" font-weight="400" fill="#24282f">1 天前乘 1.14275。</text>
+<text data-svg-label="" x="60" y="731" font-size="32" font-weight="650" fill="#24282f">融合计算</text>
+<text data-svg-label="" x="60" y="778" font-size="27" font-weight="400" fill="#24282f">基础分 = ∑ 1/(60 + 通道名次)　　近期系数 = 1 + 0.15 × 2^(−距今天数/14)</text>
+<text data-svg-label="" x="60" y="832" font-size="29" font-weight="400" fill="#24282f">A　1/62 + 1/61 + 1/61 ≈ 0.04892</text>
+<text data-svg-label="" x="776" y="832" font-size="29" font-weight="400" fill="#24282f">× 1.03750　→　0.05075　第二</text>
+<text data-svg-label="" x="60" y="888" font-size="29" font-weight="400" fill="#24282f">B　1/61 + 1/62 + 1/62 ≈ 0.04865</text>
+<text data-svg-label="" x="776" y="888" font-size="29" font-weight="650" fill="#27603f">× 1.14275　→　0.05560　第一</text>
+<rect id="node-7" data-svg-box="" x="60" y="923" width="1320" height="132" rx="14" fill="#e4ecdf" stroke="#a9c0a4" stroke-width="2"/>
+<text data-svg-container="node-7" x="84" y="968" font-size="30" font-weight="650" fill="#24282f">回答　双床房已订好，昨天收到了确认单。</text>
+<text data-svg-container="node-7" x="84" y="1014" font-size="26" font-weight="400" fill="#24282f">A 提供询价经过，B 提供最新结果。确认单未指明酒店名称，回答保留这一边界。</text>
+</g></svg>

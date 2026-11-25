@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 750" role="img"><title>用户原先说「这次住海边」</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10" fill="#d97745"/></marker></defs>
+<rect width="1440" height="750" rx="14" fill="#fbfaf6"/>
+<g font-family="system-ui, -apple-system, PingFang SC, Microsoft YaHei, sans-serif" fill="#24282f">
+<text data-svg-label="" x="60" y="68" font-size="38" font-weight="700">用户原先说「这次住海边」</text>
+<text data-svg-label="" x="60" y="116" font-size="26" fill="#6b6f76">根据后一句话的含义，分别处理同一条旅行偏好。</text>
+<rect id="node-1" data-svg-box="" x="60" y="180" width="400" height="168" rx="14" fill="#e7edf3" stroke="#b9c6d4" stroke-width="2"/>
+<text data-svg-container="node-1" x="86" y="235" font-size="31" font-weight="650">改变计划</text>
+<text data-svg-container="node-1" x="86" y="283" font-size="27" font-weight="400">「改主意了，住湖边。」</text>
+<rect id="node-2" data-svg-box="" x="515" y="180" width="400" height="168" rx="14" fill="#e7edf3" stroke="#b9c6d4" stroke-width="2"/>
+<text data-svg-container="node-2" x="541" y="235" font-size="31" font-weight="650">纠正口误</text>
+<text data-svg-container="node-2" x="541" y="283" font-size="27" font-weight="400">「说错了，是湖边。」</text>
+<rect id="node-3" data-svg-box="" x="970" y="180" width="410" height="168" rx="14" fill="#e7edf3" stroke="#b9c6d4" stroke-width="2"/>
+<text data-svg-container="node-3" x="996" y="235" font-size="31" font-weight="650">要求遗忘</text>
+<text data-svg-container="node-3" x="996" y="283" font-size="27" font-weight="400">「忘掉这次住宿偏好。」</text>
+<rect id="node-4" data-svg-box="" x="60" y="432" width="400" height="192" rx="14" fill="#e4ecdf" stroke="#a9c0a4" stroke-width="2"/>
+<text data-svg-container="node-4" x="86" y="487" font-size="31" font-weight="650">现在答「湖边」</text>
+<text data-svg-container="node-4" x="86" y="535" font-size="27" font-weight="400">海边曾经有效。</text>
+<text data-svg-container="node-4" x="86" y="583" font-size="27" font-weight="400">回顾原计划时可查。</text>
+<rect id="node-5" data-svg-box="" x="515" y="432" width="400" height="192" rx="14" fill="#f9ecdf" stroke="#e0b48f" stroke-width="2"/>
+<text data-svg-container="node-5" x="541" y="487" font-size="31" font-weight="650">现在答「湖边」</text>
+<text data-svg-container="node-5" x="541" y="535" font-size="27" font-weight="400">海边从未成立。</text>
+<text data-svg-container="node-5" x="541" y="583" font-size="27" font-weight="400">只在纠错记录中可见。</text>
+<rect id="node-6" data-svg-box="" x="970" y="432" width="410" height="192" rx="14" fill="#efe9f4" stroke="#c3b4d6" stroke-width="2"/>
+<text data-svg-container="node-6" x="996" y="487" font-size="31" font-weight="650">当前与历史均不可读</text>
+<text data-svg-container="node-6" x="996" y="535" font-size="27" font-weight="400">确认后清理关联摘录，</text>
+<text data-svg-container="node-6" x="996" y="583" font-size="27" font-weight="400">拦住旧来源重发。</text>
+<path d="M260 348 V422" fill="none" stroke="#d97745" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M715 348 V422" fill="none" stroke="#d97745" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1175 348 V422" fill="none" stroke="#d97745" stroke-width="3" marker-end="url(#arrow)"/>
+<text data-svg-label="" x="60" y="707" font-size="26">另一条有独立来源的偏好「出差住机场附近」继续有效。</text>
+</g></svg>

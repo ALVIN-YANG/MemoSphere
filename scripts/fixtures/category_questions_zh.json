@@ -1,0 +1,393 @@
+{
+  "memories": [
+    {
+      "id": "h1",
+      "category_id": "rule",
+      "text": "北辰出差的酒店每晚最多报销六百元，订房不能超过六百元。"
+    },
+    {
+      "id": "h2",
+      "category_id": "preference",
+      "text": "在北辰出差选酒店时，我喜欢湖景房。"
+    },
+    {
+      "id": "h3",
+      "category_id": "event",
+      "text": "上次北辰出差住过明川酒店，当时参加了展会。"
+    },
+    {
+      "id": "h4",
+      "category_id": "task",
+      "text": "下次北辰出差要在早晨七点到北辰站接人。"
+    },
+    {
+      "id": "c1",
+      "category_id": "rule",
+      "text": "给阿禾点咖啡不能含有牛奶，有乳制品的拿铁也不行。"
+    },
+    {
+      "id": "c2",
+      "category_id": "preference",
+      "text": "阿禾点咖啡时喜欢榛果口味。"
+    },
+    {
+      "id": "c3",
+      "category_id": "event",
+      "text": "上次给阿禾订了河岸咖啡的黑咖啡。"
+    },
+    {
+      "id": "w1",
+      "category_id": "fact",
+      "text": "蓝桥工作室使用海潮系统归档。"
+    },
+    {
+      "id": "w2",
+      "category_id": "rule",
+      "text": "蓝桥的资料只允许在内网上传，不能发公网。"
+    },
+    {
+      "id": "w3",
+      "category_id": "task",
+      "text": "蓝桥的周报要在周四交给叶宁。"
+    },
+    {
+      "id": "w4",
+      "category_id": "preference",
+      "text": "蓝桥写周报时我偏好图表。"
+    },
+    {
+      "id": "r1",
+      "category_id": "rule",
+      "text": "松岚读书会借书最多可以借两本。"
+    },
+    {
+      "id": "r2",
+      "category_id": "preference",
+      "text": "松岚读书会我喜欢借历史书。"
+    },
+    {
+      "id": "r3",
+      "category_id": "event",
+      "text": "上次松岚读书会我借了《微光》。"
+    },
+    {
+      "id": "m1",
+      "category_id": "rule",
+      "text": "给南湾会议订会场，必须有无障碍入口。"
+    },
+    {
+      "id": "m2",
+      "category_id": "preference",
+      "text": "南湾会议我比较喜欢安静的小会场。"
+    },
+    {
+      "id": "m3",
+      "category_id": "fact",
+      "text": "南湾会议的签到负责人是林原。"
+    },
+    {
+      "id": "m4",
+      "category_id": "task",
+      "text": "南湾会议还要借两支无线话筒。"
+    },
+    {
+      "id": "p1",
+      "category_id": "fact",
+      "text": "青芽项目的联络人是顾言。"
+    },
+    {
+      "id": "p2",
+      "category_id": "event",
+      "text": "青芽项目上次演示在桂园举行。"
+    },
+    {
+      "id": "p3",
+      "category_id": "task",
+      "text": "青芽项目下次演示前需要测试投影。"
+    },
+    {
+      "id": "d1",
+      "category_id": "event",
+      "text": "上周培训使用了投影设备。"
+    },
+    {
+      "id": "d2",
+      "category_id": "preference",
+      "text": "我自己泡咖啡更喜欢浅烘焙。"
+    },
+    {
+      "id": "d3",
+      "category_id": "fact",
+      "text": "南港的图书管理员是叶宁。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "H1",
+      "purpose": "select",
+      "question": "替我选北辰出差的酒店。湖景每晚720元，庭院房每晚560元，选哪间？",
+      "options": {
+        "A": "湖景",
+        "B": "庭院房",
+        "C": "两间均可",
+        "D": "依据不足"
+      },
+      "expected": "B",
+      "required": [
+        "h1",
+        "h2"
+      ],
+      "violations": {
+        "A": [
+          "超预算"
+        ],
+        "C": [
+          "超预算"
+        ]
+      }
+    },
+    {
+      "id": "H2",
+      "purpose": "cite",
+      "question": "我上次北辰出差住哪家酒店，做了什么？",
+      "options": {
+        "A": "明川酒店，参加展会",
+        "B": "庭院酒店，采购设备",
+        "C": "滨河酒店，参加展会",
+        "D": "依据不足"
+      },
+      "expected": "A",
+      "required": [
+        "h3"
+      ],
+      "violations": {}
+    },
+    {
+      "id": "H3",
+      "purpose": "cite",
+      "question": "下次北辰出差的早上安排了什么？",
+      "options": {
+        "A": "去展会",
+        "B": "七点在北辰站接人",
+        "C": "去酒店取件",
+        "D": "依据不足"
+      },
+      "expected": "B",
+      "required": [
+        "h4"
+      ],
+      "violations": {}
+    },
+    {
+      "id": "C1",
+      "purpose": "select",
+      "question": "帮阿禾选咖啡。榛果牛奶拿铁、无乳榛果美式、无乳原味美式都有。",
+      "options": {
+        "A": "榛果牛奶拿铁",
+        "B": "无乳原味美式",
+        "C": "无乳榛果美式",
+        "D": "依据不足"
+      },
+      "expected": "C",
+      "required": [
+        "c1",
+        "c2"
+      ],
+      "violations": {
+        "A": [
+          "含牛奶"
+        ]
+      }
+    },
+    {
+      "id": "C2",
+      "purpose": "cite",
+      "question": "上次给阿禾实际订过哪家的哪种咖啡？",
+      "options": {
+        "A": "河岸的榛果拿铁",
+        "B": "河岸的黑咖啡",
+        "C": "北岸的美式",
+        "D": "依据不足"
+      },
+      "expected": "B",
+      "required": [
+        "c3"
+      ],
+      "violations": {}
+    },
+    {
+      "id": "W1",
+      "purpose": "select",
+      "question": "蓝桥周报这次怎么交？可以选公网图表、内网图表或者内网纯文字。",
+      "options": {
+        "A": "公网图表",
+        "B": "内网图表",
+        "C": "内网纯文字",
+        "D": "依据不足"
+      },
+      "expected": "B",
+      "required": [
+        "w2",
+        "w4"
+      ],
+      "violations": {
+        "A": [
+          "使用公网"
+        ]
+      }
+    },
+    {
+      "id": "W2",
+      "purpose": "cite",
+      "question": "蓝桥用哪个系统归档，周报周几给谁？",
+      "options": {
+        "A": "海潮，周四给叶宁",
+        "B": "海潮，周三给叶宁",
+        "C": "山澜，周四给顾言",
+        "D": "依据不足"
+      },
+      "expected": "A",
+      "required": [
+        "w1",
+        "w3"
+      ],
+      "violations": {}
+    },
+    {
+      "id": "R1",
+      "purpose": "select",
+      "question": "松岚读书会有三本历史书，按我的借阅习惯和限制怎么借？",
+      "options": {
+        "A": "借三本历史书",
+        "B": "借两本历史书",
+        "C": "借两本小说",
+        "D": "依据不足"
+      },
+      "expected": "B",
+      "required": [
+        "r1",
+        "r2"
+      ],
+      "violations": {
+        "A": [
+          "超过借本上限"
+        ]
+      }
+    },
+    {
+      "id": "R2",
+      "purpose": "cite",
+      "question": "上回去松岚读书会借到哪本书？",
+      "options": {
+        "A": "《青松》",
+        "B": "《北岸》",
+        "C": "《微光》",
+        "D": "依据不足"
+      },
+      "expected": "C",
+      "required": [
+        "r3"
+      ],
+      "violations": {}
+    },
+    {
+      "id": "M1",
+      "purpose": "select",
+      "question": "南湾会议选哪个会场？甲安静但只有楼梯，乙安静且有无障碍入口，丙很吵但有无障碍入口。",
+      "options": {
+        "A": "甲",
+        "B": "乙",
+        "C": "丙",
+        "D": "依据不足"
+      },
+      "expected": "B",
+      "required": [
+        "m1",
+        "m2"
+      ],
+      "violations": {
+        "A": [
+          "无无障碍入口"
+        ]
+      }
+    },
+    {
+      "id": "M2",
+      "purpose": "cite",
+      "question": "南湾会议谁管签到，还要借什么？",
+      "options": {
+        "A": "顾言，两支话筒",
+        "B": "林原，两支无线话筒",
+        "C": "叶宁，一个投影仪",
+        "D": "依据不足"
+      },
+      "expected": "B",
+      "required": [
+        "m3",
+        "m4"
+      ],
+      "violations": {}
+    },
+    {
+      "id": "P1",
+      "purpose": "cite",
+      "question": "青芽上次在哪里演示，下次演示前要做什么？",
+      "options": {
+        "A": "桂园，测试投影",
+        "B": "竹园，测试投影",
+        "C": "桂园，租话筒",
+        "D": "依据不足"
+      },
+      "expected": "A",
+      "required": [
+        "p2",
+        "p3"
+      ],
+      "violations": {}
+    },
+    {
+      "id": "P2",
+      "purpose": "cite",
+      "question": "青芽项目需要联系谁？",
+      "options": {
+        "A": "林原",
+        "B": "叶宁",
+        "C": "顾言",
+        "D": "依据不足"
+      },
+      "expected": "C",
+      "required": [
+        "p1"
+      ],
+      "violations": {}
+    },
+    {
+      "id": "U1",
+      "purpose": "cite",
+      "question": "阿禾上次在河岸买咖啡花了多少钱？",
+      "options": {
+        "A": "18元",
+        "B": "28元",
+        "C": "38元",
+        "D": "依据不足"
+      },
+      "expected": "D",
+      "required": [],
+      "violations": {}
+    },
+    {
+      "id": "U2",
+      "purpose": "cite",
+      "question": "蓝桥工作室把内网系统迁到海潮的确切日期是哪天？",
+      "options": {
+        "A": "五月十日",
+        "B": "六月三日",
+        "C": "七月一日",
+        "D": "依据不足"
+      },
+      "expected": "D",
+      "required": [],
+      "violations": {}
+    }
+  ]
+}
