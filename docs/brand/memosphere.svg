@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">MemoSphere · 记忆书页</title>
+  <rect width="128" height="128" rx="28" fill="#174c3c"/>
+  <!-- A spherical folio, with the page edges meeting at the spine. -->
+  <path fill="#fbf7e9" d="M23 51a43 43 0 0 1 82-1c-15 0-29 5-41 14-12-8-26-13-41-13Z"/>
+  <path fill="#f9f5e6" d="M21 58c16 0 30 5 43 14 13-10 28-15 43-15 .5 5 .4 9-.3 13-17 .5-32 6-42.7 15-12-9-26-13-42.5-14-.8-4.5-1-9-.5-13Z"/>
+  <path fill="#c4dbc3" d="M23.6 78.5C39 80 53 85 64 93c11-8.5 25-14 40.5-15.5a43 43 0 0 1-80.9 1Z"/>
+  <!-- The ribbon follows the right-hand page. -->
+  <path fill="#d67d48" d="M76 23a43 43 0 0 1 13 6v22l-6-3-7 8Z"/>
+</svg>

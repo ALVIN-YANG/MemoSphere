@@ -1,3 +1,5 @@
+<img src="docs/brand/memosphere.svg" alt="MemoSphere 图标" width="88" height="88">
+
 # MemoSphere
 
 **给 AI 助手一份可以回看、纠正和删除的长期记忆。**
